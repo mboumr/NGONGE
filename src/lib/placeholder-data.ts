@@ -271,7 +271,7 @@ export const ngonjeCaseStudies = [
     imageId: "project-air-force",
   },
   {
-    client: "Department of the Army",
+    client: "Defence Logistic Agency",
     contractNumber: "SP4703-25-P-0034",
     projectTitle: "Protective Uniform Rental for Electrical Personnel and Shop Towel Rental",
     duration: "October 2025 – October 2030",
