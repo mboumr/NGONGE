@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Building, Shirt, Truck } from 'lucide-react';
-import { capabilities, caseStudies, trustIndicators } from '@/lib/placeholder-data';
+import { capabilities, ngonjeCaseStudies, trustIndicators } from '@/lib/placeholder-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
@@ -116,7 +116,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.slice(0, 3).map((study, index) => {
+            {ngonjeCaseStudies.slice(0, 3).map((study, index) => {
               const studyImage = PlaceHolderImages.find(p => p.id === study.imageId);
               return (
                 <Card key={index} className="overflow-hidden group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
@@ -124,7 +124,7 @@ export default function Home() {
                     <div className="relative h-48 w-full overflow-hidden">
                       <Image
                         src={studyImage.imageUrl}
-                        alt={study.problem}
+                        alt={study.projectTitle}
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                         data-ai-hint={studyImage.imageHint}
@@ -132,12 +132,32 @@ export default function Home() {
                     </div>
                   )}
                   <CardHeader>
-                    <CardTitle>{study.client}</CardTitle>
-                    <CardDescription>{study.category}</CardDescription>
+                    <CardTitle>{study.projectTitle}</CardTitle>
+                    <CardDescription>{study.client}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold text-primary">Result</h4>
-                    <p className="text-muted-foreground mt-1">{study.result}</p>
+                  <CardContent className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-primary text-sm">Description</h4>
+                      <p className="text-muted-foreground mt-1 text-sm">{study.description}</p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <h4 className="font-semibold text-primary">Duration</h4>
+                        <p className="text-muted-foreground">{study.duration}</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary">Contract Value</h4>
+                        <p className="text-muted-foreground">{study.contractValue}</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary">Contract #</h4>
+                        <p className="text-muted-foreground font-code">{study.contractNumber}</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary">POC</h4>
+                        <p className="text-muted-foreground">{study.poc}</p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               );
