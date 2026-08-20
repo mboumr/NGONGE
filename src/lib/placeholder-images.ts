@@ -267,15 +267,15 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   },
   {
     "id": "project-army",
-    "description": "A soldier in uniform working on the electrical systems of a military vehicle.",
-    "imageUrl": "/images/Protective Uniform Rental.png",
-    "imageHint": "soldiers maintenance"
+    "description": "Industrial shop rag in use during maintenance work.",
+    "imageUrl": "/images/projects/shop-towels-card.jpg",
+    "imageHint": "shop rags"
   },
   {
     "id": "project-interior",
-    "description": "A wide shot of the Hoover Dam, representing the Bureau of Reclamation.",
-    "imageUrl": "/images/yuma_c1.jpeg",
-    "imageHint": "hoover dam"
+    "description": "Commercial laundry equipment used for garment and linen service.",
+    "imageUrl": "/images/projects/industrial-laundry-wm.jpg",
+    "imageHint": "commercial laundry"
   },
   {
     "id": "project-dod-1",
@@ -294,5 +294,77 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
     "description": "A scientist in a lab coat inspecting samples in a food safety laboratory.",
     "imageUrl": "/images/Lab Coat Rental & Servicing.png",
     "imageHint": "food safety lab"
+  },
+  {
+    "id": "project-hurlburt",
+    "description": "Industrial coveralls for shop and flight-line support.",
+    "imageUrl": "/images/projects/coverall-model-crop.jpg",
+    "imageHint": "industrial coveralls"
+  },
+  {
+    "id": "project-navy-coverall",
+    "description": "Navy flame-resistant coveralls on the waterfront.",
+    "imageUrl": "/images/projects/fr-navy-coverall.jpg",
+    "imageHint": "navy FR coveralls"
+  },
+  {
+    "id": "project-wa-arng",
+    "description": "Industrial coveralls for maintenance shop laundry.",
+    "imageUrl": "/images/projects/coverall-model-crop.jpg",
+    "imageHint": "coverall rental"
+  },
+  {
+    "id": "project-macdill",
+    "description": "Vehicle and aircraft maintenance technician in coveralls.",
+    "imageUrl": "/images/projects/aircraft-mechanic.jpg",
+    "imageHint": "vehicle maintenance coveralls"
+  },
+  {
+    "id": "project-dla-tinker",
+    "description": "Fire-resistant coveralls for welding and electrical shops.",
+    "imageUrl": "/images/projects/fr-coverall-crop.jpg",
+    "imageHint": "FR coveralls"
+  },
+  {
+    "id": "project-ri-arng",
+    "description": "Red industrial shop towels used in vehicle maintenance.",
+    "imageUrl": "/images/projects/shop-towels-card.jpg",
+    "imageHint": "shop towels"
+  },
+  {
+    "id": "project-dot-vancouver",
+    "description": "Walk-off mats at a laboratory entrance.",
+    "imageUrl": "/images/projects/walk-off-mat-card.jpg",
+    "imageHint": "walk-off mats"
+  },
+  {
+    "id": "project-usafa-bus",
+    "description": "Charter motorcoach for group ground transportation.",
+    "imageUrl": "/images/projects/white-coach.jpg",
+    "imageHint": "charter motorcoach"
+  },
+  {
+    "id": "project-jbab-water",
+    "description": "Palletized cases of bottled water staged for emergency delivery.",
+    "imageUrl": "/images/projects/water-pallets.jpg",
+    "imageHint": "bottled water pallets"
+  },
+  {
+    "id": "project-edwards-trailers",
+    "description": "Mobile laundry trailer used for field support.",
+    "imageUrl": "/images/projects/laundry-trailer-card.jpg",
+    "imageHint": "laundry trailer"
+  },
+  {
+    "id": "project-irwin-graywater",
+    "description": "Vacuum tanker used for gray water and sewer support.",
+    "imageUrl": "/images/projects/vacuum-us.jpg",
+    "imageHint": "vacuum tanker"
+  },
+  {
+    "id": "project-beaufort-mattress",
+    "description": "Compressed Twin XL mattress packaged for delivery.",
+    "imageUrl": "/images/projects/mattress-compressed.jpg",
+    "imageHint": "mattress supply"
   }
 ];

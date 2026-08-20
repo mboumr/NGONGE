@@ -1,16 +1,31 @@
-
 "use client";
 
 import Image from 'next/image';
-import { PageHeader } from "@/components/shared/PageHeader";
 import { ngonjeCaseStudies, vestisCaseStudies } from "@/lib/placeholder-data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+
+type ProjectStudy = {
+  projectTitle: string;
+  client: string;
+  description: string;
+  duration: string;
+  contractValue: string;
+  contractNumber: string;
+  poc: string;
+  imageId: string;
+  vehicle?: string;
+  location?: string;
+};
+
+const currentAwards = ngonjeCaseStudies.filter((study) => study.group === "current");
+const logisticsAwards = ngonjeCaseStudies.filter((study) => study.group === "logistics");
+const completedAwards = ngonjeCaseStudies.filter((study) => study.group === "completed");
 
 export default function PastPerformancePage() {
 
-  const ProjectCard = ({ study }: { study: (typeof ngonjeCaseStudies)[0] }) => {
+  const ProjectCard = ({ study }: { study: ProjectStudy }) => {
     const studyImage = PlaceHolderImages.find(p => p.id === study.imageId);
     return (
         <Card className="flex flex-col">
@@ -51,6 +66,18 @@ export default function PastPerformancePage() {
                         <h4 className="font-semibold text-primary">POC</h4>
                         <p className="text-muted-foreground">{study.poc}</p>
                     </div>
+                    {study.vehicle && (
+                    <div>
+                        <h4 className="font-semibold text-primary">Vehicle</h4>
+                        <p className="text-muted-foreground">{study.vehicle}</p>
+                    </div>
+                    )}
+                    {study.location && (
+                    <div>
+                        <h4 className="font-semibold text-primary">Place of Performance</h4>
+                        <p className="text-muted-foreground">{study.location}</p>
+                    </div>
+                    )}
                 </div>
             </CardContent>
         </Card>
@@ -62,13 +89,45 @@ export default function PastPerformancePage() {
       <div className="container mx-auto py-12 sm:py-20 space-y-16 sm:space-y-24">
         <section id="ngonge-projects">
             <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Our Current Projects</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Current Federal Performance</h2>
                 <p className="mt-2 max-w-2xl mx-auto text-muted-foreground">
-                    A selection of contracts successfully delivered by NGONGE Federal Solutions.
+                    Active laundry and uniform awards NGONGE is performing as prime.
                 </p>
             </div>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {ngonjeCaseStudies.map((study) => (
+                {currentAwards.map((study) => (
+                    <ProjectCard key={study.contractNumber} study={study} />
+                ))}
+            </div>
+        </section>
+
+        <Separator />
+
+        <section id="logistics-projects">
+            <div className="text-center">
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Mission Logistics</h2>
+                <p className="mt-2 max-w-2xl mx-auto text-muted-foreground">
+                    Active transportation and contingency support vehicles.
+                </p>
+            </div>
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {logisticsAwards.map((study) => (
+                    <ProjectCard key={study.contractNumber} study={study} />
+                ))}
+            </div>
+        </section>
+
+        <Separator />
+
+        <section id="completed-projects">
+            <div className="text-center">
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Completed Awards</h2>
+                <p className="mt-2 max-w-2xl mx-auto text-muted-foreground">
+                    Recently completed NGONGE prime awards.
+                </p>
+            </div>
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {completedAwards.map((study) => (
                     <ProjectCard key={study.contractNumber} study={study} />
                 ))}
             </div>
