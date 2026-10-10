@@ -214,7 +214,7 @@ export const trustIndicators = [
     },
     {
         name: 'Army',
-        imageUrl: '/images/Army.png',
+        imageUrl: '/images/Department_of_the_Army.png',
         alt: 'Department of the Army seal'
     },
     {
