@@ -215,7 +215,12 @@ export const trustIndicators = [
     {
         name: 'Army',
         imageUrl: '/images/Army.png',
-        alt: 'Army Logo'
+        alt: 'Department of the Army seal'
+    },
+    {
+        name: 'Defense Logistics Agency',
+        imageUrl: '/images/Defense_Logistics_Agency.png',
+        alt: 'Defense Logistics Agency seal'
     },
     {
         name: 'Department_of_the_Interio',
