@@ -52,11 +52,10 @@ export default function Home() {
     <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
       Trusted by Federal Agencies
     </h3>
-    <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-4 items-center max-w-4xl mx-auto">
+    <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-8 max-w-6xl mx-auto">
       {trustIndicators.map((indicator, i) => (
-        <div key={indicator.name} className="flex justify-center animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s`}}>
-          {/* 👇 CHANGE MADE HERE: Increased image container size */}
-          <div className="relative h-28 w-56"> {/* Changed from h-20 w-48 to h-28 w-56 */}
+        <div key={indicator.name} className="flex w-40 justify-center sm:w-48 animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s`}}>
+          <div className="relative h-28 w-full">
               <Image 
                   src={indicator.imageUrl}
                   alt={indicator.alt}
